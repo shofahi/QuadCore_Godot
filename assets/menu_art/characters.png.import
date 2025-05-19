@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3qoget7l0ay6"
-path="res://.godot/imported/label_continue.png-188d51bc94001165f7a013eae491bb24.ctex"
+uid="uid://c7nsvtcgshpnc"
+path="res://.godot/imported/characters.png-eb77aae8afe7fd2062f2f48886ad3406.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/main_menu/label_continue.png"
-dest_files=["res://.godot/imported/label_continue.png-188d51bc94001165f7a013eae491bb24.ctex"]
+source_file="res://assets/menu_art/characters.png"
+dest_files=["res://.godot/imported/characters.png-eb77aae8afe7fd2062f2f48886ad3406.ctex"]
 
 [params]
 
