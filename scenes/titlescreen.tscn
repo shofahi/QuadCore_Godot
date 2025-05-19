@@ -1,0 +1,72 @@
+[gd_scene load_steps=8 format=3 uid="uid://b1vxnw1ypwygm"]
+
+[ext_resource type="Texture2D" uid="uid://c1ro1wx3tj8bv" path="res://assets/main_menu/title.png" id="1_3d1i7"]
+[ext_resource type="Texture2D" uid="uid://c3qoget7l0ay6" path="res://assets/main_menu/label_continue.png" id="2_7nrmo"]
+[ext_resource type="Texture2D" uid="uid://c7nsvtcgshpnc" path="res://assets/main_menu/characters.png" id="2_48ign"]
+[ext_resource type="Texture2D" uid="uid://bt5b2usgo2gg2" path="res://assets/main_menu/label_new_game.png" id="3_clbkb"]
+[ext_resource type="Texture2D" uid="uid://bx5c80dej7kfn" path="res://assets/main_menu/label_options.png" id="4_ldpc3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_y35fp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ldpc3"]
+font_size = 10
+
+[node name="Main Menu" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 120
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 120
+theme_override_constants/margin_bottom = 80
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Title Art" type="TextureRect" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_3d1i7")
+
+[node name="Menu Buttons" type="VBoxContainer" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer/Menu Buttons"]
+layout_mode = 2
+
+[node name="Continue" type="TextureButton" parent="HBoxContainer/VBoxContainer/Menu Buttons/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_7nrmo")
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/Menu Buttons/HBoxContainer"]
+layout_mode = 2
+text = "- last save date"
+label_settings = SubResource("LabelSettings_y35fp")
+
+[node name="NewGame" type="TextureButton" parent="HBoxContainer/VBoxContainer/Menu Buttons"]
+layout_mode = 2
+texture_normal = ExtResource("3_clbkb")
+
+[node name="Options" type="TextureButton" parent="HBoxContainer/VBoxContainer/Menu Buttons"]
+layout_mode = 2
+texture_normal = ExtResource("4_ldpc3")
+
+[node name="Version" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "version 0.1"
+label_settings = SubResource("LabelSettings_ldpc3")
+
+[node name="CenterContainer" type="CenterContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Menu Art" type="TextureRect" parent="HBoxContainer/CenterContainer"]
+layout_mode = 2
+texture = ExtResource("2_48ign")
