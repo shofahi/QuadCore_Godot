@@ -1,5 +1,5 @@
 extends MarginContainer
-var TITLESCREEN: String = "res://scenes/menus/titlescreen.tscn"
+const TITLESCREEN: String = "res://scenes/menus/titlescreen.tscn"
 
 func _on_back_pressed() -> void:
 		get_tree().change_scene_to_file(TITLESCREEN)
