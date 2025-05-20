@@ -1,10 +1,9 @@
 extends MarginContainer
 
-var MAIN_MENU: String = "res://scenes/menus/main_menu.tscn"
-var OPTIONS: String = "res://scenes/menus/options.tscn"
+const MAIN_MENU: String = "res://scenes/menus/main_menu.tscn"
+const OPTIONS: String = "res://scenes/menus/options.tscn"
 
 func _on_continue_button_pressed() -> void:
-	
 	pass # Replace with function body.
 
 

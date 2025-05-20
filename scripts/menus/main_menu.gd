@@ -1,7 +1,7 @@
 extends MarginContainer
 
-var OPTIONS: String = "res://scenes/menus/options.tscn"
-var TITLESCREEN: String = "res://scenes/menus/titlescreen.tscn"
+const OPTIONS: String = "res://scenes/menus/options.tscn"
+const TITLESCREEN: String = "res://scenes/menus/titlescreen.tscn"
 
 func _on_save_pressed() -> void:
 	pass # Replace with function body.
