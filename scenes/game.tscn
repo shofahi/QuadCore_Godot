@@ -1,10 +1,3 @@
-[gd_scene load_steps=3 format=3 uid="uid://den5svdji0rvk"]
-
-[ext_resource type="PackedScene" uid="uid://paipygv0neeh" path="res://scenes/map.tscn" id="1_yqjtg"]
-[ext_resource type="PackedScene" uid="uid://dc78xa1h5bxi8" path="res://scenes/music.tscn" id="2_lnu2h"]
+[gd_scene format=3 uid="uid://den5svdji0rvk"]
 
 [node name="Game" type="Node2D"]
-
-[node name="Map" parent="." instance=ExtResource("1_yqjtg")]
-
-[node name="Music" parent="." instance=ExtResource("2_lnu2h")]
