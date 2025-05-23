@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dc78xa1h5bxi8"]
+
+[ext_resource type="AudioStream" uid="uid://yaopeepwtnmp" path="res://assets/audio/music/drafts/MartinEkman_PowerIntro.mp3" id="1_05ggv"]
+
+[node name="Music" type="Node"]
+
+[node name="MenuMusic" type="Node" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="MenuMusic"]
+stream = ExtResource("1_05ggv")
+autoplay = true
