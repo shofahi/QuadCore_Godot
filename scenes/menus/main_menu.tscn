@@ -1,13 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://b5ispyx76g4kw"]
+[gd_scene load_steps=7 format=3 uid="uid://b5ispyx76g4kw"]
 
 [ext_resource type="Script" uid="uid://df6octp0pt5gs" path="res://scripts/menus/main_menu.gd" id="1_1hnlc"]
 [ext_resource type="Texture2D" uid="uid://c1ro1wx3tj8bv" path="res://assets/menu_art/title.png" id="2_1hnlc"]
-[ext_resource type="Texture2D" uid="uid://byxo1bgg1lshv" path="res://assets/menu_art/save.png" id="3_1hnlc"]
-[ext_resource type="Texture2D" uid="uid://bey0ycdl17v07" path="res://assets/menu_art/loadmap.png" id="4_50h1w"]
-[ext_resource type="Texture2D" uid="uid://ecj4kh12im8f" path="res://assets/menu_art/high_score.png" id="5_1hnlc"]
-[ext_resource type="Texture2D" uid="uid://bx5c80dej7kfn" path="res://assets/menu_art/label_options.png" id="6_1hnlc"]
-[ext_resource type="Texture2D" uid="uid://b34557gckst7g" path="res://assets/menu_art/exit_game.png" id="7_1hnlc"]
+[ext_resource type="Texture2D" uid="uid://n86wguy4j1p0" path="res://assets/menu_art/buttonsBackground.png" id="3_imvie"]
+[ext_resource type="Texture2D" uid="uid://cc1dmnmc6jbgx" path="res://assets/menu_art/buttonsBackgroundOnHover.png" id="4_ng0o5"]
 [ext_resource type="Texture2D" uid="uid://c7nsvtcgshpnc" path="res://assets/menu_art/characters.png" id="8_1hnlc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1hnlc"]
+font_size = 35
 
 [node name="Main Menu" type="MarginContainer"]
 anchors_preset = 15
@@ -35,28 +35,69 @@ texture = ExtResource("2_1hnlc")
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 3
-theme_override_constants/separation = 30
+theme_override_constants/separation = 10
 alignment = 1
 
 [node name="Save" type="TextureButton" parent="HBoxContainer/VBoxContainer/Menu Buttons"]
 layout_mode = 2
-texture_normal = ExtResource("3_1hnlc")
+texture_normal = ExtResource("3_imvie")
+texture_hover = ExtResource("4_ng0o5")
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/Menu Buttons/Save"]
+offset_left = 5.0
+offset_right = 139.0
+offset_bottom = 49.0
+text = "Save"
+label_settings = SubResource("LabelSettings_1hnlc")
 
 [node name="Load Map" type="TextureButton" parent="HBoxContainer/VBoxContainer/Menu Buttons"]
 layout_mode = 2
-texture_normal = ExtResource("4_50h1w")
+texture_normal = ExtResource("3_imvie")
+texture_hover = ExtResource("4_ng0o5")
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/Menu Buttons/Load Map"]
+offset_left = 5.0
+offset_right = 139.0
+offset_bottom = 49.0
+text = "Load Map"
+label_settings = SubResource("LabelSettings_1hnlc")
 
 [node name="High Scores" type="TextureButton" parent="HBoxContainer/VBoxContainer/Menu Buttons"]
 layout_mode = 2
-texture_normal = ExtResource("5_1hnlc")
+texture_normal = ExtResource("3_imvie")
+texture_hover = ExtResource("4_ng0o5")
 
-[node name="Options" type="TextureButton" parent="HBoxContainer/VBoxContainer/Menu Buttons"]
-layout_mode = 2
-texture_normal = ExtResource("6_1hnlc")
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/Menu Buttons/High Scores"]
+offset_left = 5.0
+offset_right = 139.0
+offset_bottom = 49.0
+text = "High Score"
+label_settings = SubResource("LabelSettings_1hnlc")
 
-[node name="Exit" type="TextureButton" parent="HBoxContainer/VBoxContainer/Menu Buttons"]
+[node name="Choose Char" type="TextureButton" parent="HBoxContainer/VBoxContainer/Menu Buttons"]
 layout_mode = 2
-texture_normal = ExtResource("7_1hnlc")
+texture_normal = ExtResource("3_imvie")
+texture_hover = ExtResource("4_ng0o5")
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/Menu Buttons/Choose Char"]
+offset_left = 5.0
+offset_right = 139.0
+offset_bottom = 49.0
+rotation = -0.000112076
+text = "Choose Char"
+label_settings = SubResource("LabelSettings_1hnlc")
+
+[node name="Titlescreen" type="TextureButton" parent="HBoxContainer/VBoxContainer/Menu Buttons"]
+layout_mode = 2
+texture_normal = ExtResource("3_imvie")
+texture_hover = ExtResource("4_ng0o5")
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/Menu Buttons/Titlescreen"]
+offset_left = 5.0
+offset_right = 139.0
+offset_bottom = 49.0
+text = "Titlescreen"
+label_settings = SubResource("LabelSettings_1hnlc")
 
 [node name="CenterContainer" type="CenterContainer" parent="HBoxContainer"]
 layout_mode = 2
@@ -68,5 +109,5 @@ texture = ExtResource("8_1hnlc")
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/Menu Buttons/Save" to="." method="_on_save_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/Menu Buttons/Load Map" to="." method="_on_load_map_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/Menu Buttons/High Scores" to="." method="_on_high_scores_pressed"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer/Menu Buttons/Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer/Menu Buttons/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Menu Buttons/Choose Char" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Menu Buttons/Titlescreen" to="." method="_on_exit_pressed"]
