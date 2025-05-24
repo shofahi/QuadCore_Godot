@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://cgtuvxn83en3l" path="res://scripts/menus/titlescreen.gd" id="1_xdyvs"]
 [ext_resource type="Texture2D" uid="uid://c1ro1wx3tj8bv" path="res://assets/menu_art/title.png" id="2_xdyvs"]
-[ext_resource type="Texture2D" uid="uid://n86wguy4j1p0" path="res://assets/menu_art/buttonsBackground.png" id="5_xdyvs"]
-[ext_resource type="Texture2D" uid="uid://cc1dmnmc6jbgx" path="res://assets/menu_art/buttonsBackgroundOnHover.png" id="6_gjsd3"]
+[ext_resource type="Texture2D" uid="uid://n86wguy4j1p0" path="res://assets/menu_art/buttons_background.png" id="5_xdyvs"]
+[ext_resource type="Texture2D" uid="uid://cc1dmnmc6jbgx" path="res://assets/menu_art/buttons_background_on_hover.png" id="6_gjsd3"]
 [ext_resource type="Texture2D" uid="uid://c7nsvtcgshpnc" path="res://assets/menu_art/characters.png" id="7_06l3q"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_84j7p"]
@@ -55,6 +55,7 @@ texture_normal = ExtResource("5_xdyvs")
 texture_hover = ExtResource("6_gjsd3")
 
 [node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/Menu Buttons/HBoxContainer/Continue_button"]
+layout_mode = 0
 offset_left = 5.0
 offset_right = 139.0
 offset_bottom = 49.0
@@ -72,6 +73,7 @@ texture_normal = ExtResource("5_xdyvs")
 texture_hover = ExtResource("6_gjsd3")
 
 [node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/Menu Buttons/New_Game_button"]
+layout_mode = 0
 offset_left = 5.0
 offset_right = 139.0
 offset_bottom = 49.0
