@@ -14,4 +14,3 @@ config/name="QuadCore_Godot"
 run/main_scene="uid://b1vxnw1ypwygm"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
-

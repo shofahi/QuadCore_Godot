@@ -16,7 +16,7 @@ func _on_high_scores_pressed() -> void:
 
 
 func _on_options_pressed() -> void:
-	get_tree().change_scene_to_file(OPTIONS)
+	pass
 
 func _on_exit_pressed() -> void:
 	get_tree().change_scene_to_file(TITLESCREEN)

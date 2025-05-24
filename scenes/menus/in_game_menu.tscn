@@ -2,9 +2,11 @@
 
 [ext_resource type="Script" uid="uid://cteeuwld0g2d6" path="res://scripts/menus/in_game_menu.gd" id="1_73t5f"]
 [ext_resource type="Texture2D" uid="uid://c1ro1wx3tj8bv" path="res://assets/menu_art/title.png" id="2_0xqwh"]
-[ext_resource type="Texture2D" uid="uid://c3qoget7l0ay6" path="res://assets/menu_art/label_continue.png" id="3_0xqwh"]
-[ext_resource type="Texture2D" uid="uid://bx5c80dej7kfn" path="res://assets/menu_art/label_options.png" id="4_0xqwh"]
-[ext_resource type="Texture2D" uid="uid://b34557gckst7g" path="res://assets/menu_art/exit_game.png" id="5_0xqwh"]
+[ext_resource type="Texture2D" uid="uid://n86wguy4j1p0" path="res://assets/menu_art/buttonsBackground.png" id="3_styqn"]
+[ext_resource type="Texture2D" uid="uid://cc1dmnmc6jbgx" path="res://assets/menu_art/buttonsBackgroundOnHover.png" id="4_0xqwh"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0xqwh"]
+font_size = 35
 
 [node name="In Game Menu" type="MarginContainer"]
 anchors_preset = 15
@@ -35,16 +37,40 @@ alignment = 1
 
 [node name="Continue_button" type="TextureButton" parent="VBoxContainer/Menu Buttons"]
 layout_mode = 2
-texture_normal = ExtResource("3_0xqwh")
+texture_normal = ExtResource("3_styqn")
+texture_hover = ExtResource("4_0xqwh")
 
-[node name="Options" type="TextureButton" parent="VBoxContainer/Menu Buttons"]
+[node name="Label" type="Label" parent="VBoxContainer/Menu Buttons/Continue_button"]
+offset_left = 5.0
+offset_right = 139.0
+offset_bottom = 49.0
+text = "Continue"
+label_settings = SubResource("LabelSettings_0xqwh")
+
+[node name="Character" type="TextureButton" parent="VBoxContainer/Menu Buttons"]
 layout_mode = 2
-texture_normal = ExtResource("4_0xqwh")
+texture_normal = ExtResource("3_styqn")
+texture_hover = ExtResource("4_0xqwh")
+
+[node name="Label" type="Label" parent="VBoxContainer/Menu Buttons/Character"]
+offset_left = 5.0
+offset_right = 139.0
+offset_bottom = 49.0
+text = "Character"
+label_settings = SubResource("LabelSettings_0xqwh")
 
 [node name="Exit" type="TextureButton" parent="VBoxContainer/Menu Buttons"]
 layout_mode = 2
-texture_normal = ExtResource("5_0xqwh")
+texture_normal = ExtResource("3_styqn")
+texture_hover = ExtResource("4_0xqwh")
+
+[node name="Label" type="Label" parent="VBoxContainer/Menu Buttons/Exit"]
+offset_left = 5.0
+offset_right = 139.0
+offset_bottom = 49.0
+text = "Exit"
+label_settings = SubResource("LabelSettings_0xqwh")
 
 [connection signal="pressed" from="VBoxContainer/Menu Buttons/Continue_button" to="." method="_on_continue_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/Menu Buttons/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/Menu Buttons/Character" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="VBoxContainer/Menu Buttons/Exit" to="." method="_on_exit_pressed"]

@@ -2,10 +2,12 @@
 
 [ext_resource type="Script" uid="uid://b6nvpuv05m6o6" path="res://scripts/menus/options.gd" id="1_kmlaq"]
 [ext_resource type="Texture2D" uid="uid://c1ro1wx3tj8bv" path="res://assets/menu_art/title.png" id="2_kmlaq"]
-[ext_resource type="Texture2D" uid="uid://vcym4hs5h32o" path="res://assets/menu_art/graphics.png" id="3_kmlaq"]
-[ext_resource type="Texture2D" uid="uid://b8w866eiep6u3" path="res://assets/menu_art/sound.png" id="4_kmlaq"]
-[ext_resource type="Texture2D" uid="uid://dehir26xm144r" path="res://assets/menu_art/back.png" id="5_swpkq"]
+[ext_resource type="Texture2D" uid="uid://n86wguy4j1p0" path="res://assets/menu_art/buttonsBackground.png" id="3_q6yoi"]
+[ext_resource type="Texture2D" uid="uid://cc1dmnmc6jbgx" path="res://assets/menu_art/buttonsBackgroundOnHover.png" id="4_kmlaq"]
 [ext_resource type="Texture2D" uid="uid://c7nsvtcgshpnc" path="res://assets/menu_art/characters.png" id="6_kmlaq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_kmlaq"]
+font_size = 35
 
 [node name="Options" type="MarginContainer"]
 anchors_preset = 15
@@ -33,20 +35,44 @@ texture = ExtResource("2_kmlaq")
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 3
-theme_override_constants/separation = 30
+theme_override_constants/separation = 10
 alignment = 1
 
 [node name="Graphics" type="TextureButton" parent="HBoxContainer/VBoxContainer/Menu Buttons"]
 layout_mode = 2
-texture_normal = ExtResource("3_kmlaq")
+texture_normal = ExtResource("3_q6yoi")
+texture_hover = ExtResource("4_kmlaq")
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/Menu Buttons/Graphics"]
+offset_left = 5.0
+offset_right = 139.0
+offset_bottom = 49.0
+text = "Graphics"
+label_settings = SubResource("LabelSettings_kmlaq")
 
 [node name="Sound" type="TextureButton" parent="HBoxContainer/VBoxContainer/Menu Buttons"]
 layout_mode = 2
-texture_normal = ExtResource("4_kmlaq")
+texture_normal = ExtResource("3_q6yoi")
+texture_hover = ExtResource("4_kmlaq")
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/Menu Buttons/Sound"]
+offset_left = 5.0
+offset_right = 139.0
+offset_bottom = 49.0
+text = "Sound"
+label_settings = SubResource("LabelSettings_kmlaq")
 
 [node name="Back" type="TextureButton" parent="HBoxContainer/VBoxContainer/Menu Buttons"]
 layout_mode = 2
-texture_normal = ExtResource("5_swpkq")
+texture_normal = ExtResource("3_q6yoi")
+texture_hover = ExtResource("4_kmlaq")
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/Menu Buttons/Back"]
+offset_left = 5.0
+offset_right = 139.0
+offset_bottom = 49.0
+text = "Back"
+label_settings = SubResource("LabelSettings_kmlaq")
 
 [node name="CenterContainer" type="CenterContainer" parent="HBoxContainer"]
 layout_mode = 2
