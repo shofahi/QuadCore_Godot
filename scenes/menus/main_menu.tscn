@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://df6octp0pt5gs" path="res://scripts/menus/main_menu.gd" id="1_1hnlc"]
 [ext_resource type="Texture2D" uid="uid://c1ro1wx3tj8bv" path="res://assets/menu_art/title.png" id="2_1hnlc"]
-[ext_resource type="Texture2D" uid="uid://n86wguy4j1p0" path="res://assets/menu_art/buttonsBackground.png" id="3_imvie"]
-[ext_resource type="Texture2D" uid="uid://cc1dmnmc6jbgx" path="res://assets/menu_art/buttonsBackgroundOnHover.png" id="4_ng0o5"]
+[ext_resource type="Texture2D" uid="uid://n86wguy4j1p0" path="res://assets/menu_art/buttons_background.png" id="3_imvie"]
+[ext_resource type="Texture2D" uid="uid://cc1dmnmc6jbgx" path="res://assets/menu_art/buttons_background_on_hover.png" id="4_ng0o5"]
 [ext_resource type="Texture2D" uid="uid://c7nsvtcgshpnc" path="res://assets/menu_art/characters.png" id="8_1hnlc"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1hnlc"]
@@ -44,6 +44,7 @@ texture_normal = ExtResource("3_imvie")
 texture_hover = ExtResource("4_ng0o5")
 
 [node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/Menu Buttons/Save"]
+layout_mode = 0
 offset_left = 5.0
 offset_right = 139.0
 offset_bottom = 49.0
@@ -56,6 +57,7 @@ texture_normal = ExtResource("3_imvie")
 texture_hover = ExtResource("4_ng0o5")
 
 [node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/Menu Buttons/Load Map"]
+layout_mode = 0
 offset_left = 5.0
 offset_right = 139.0
 offset_bottom = 49.0
@@ -68,6 +70,7 @@ texture_normal = ExtResource("3_imvie")
 texture_hover = ExtResource("4_ng0o5")
 
 [node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/Menu Buttons/High Scores"]
+layout_mode = 0
 offset_left = 5.0
 offset_right = 139.0
 offset_bottom = 49.0
@@ -80,6 +83,7 @@ texture_normal = ExtResource("3_imvie")
 texture_hover = ExtResource("4_ng0o5")
 
 [node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/Menu Buttons/Choose Char"]
+layout_mode = 0
 offset_left = 5.0
 offset_right = 139.0
 offset_bottom = 49.0
@@ -93,6 +97,7 @@ texture_normal = ExtResource("3_imvie")
 texture_hover = ExtResource("4_ng0o5")
 
 [node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/Menu Buttons/Titlescreen"]
+layout_mode = 0
 offset_left = 5.0
 offset_right = 139.0
 offset_bottom = 49.0

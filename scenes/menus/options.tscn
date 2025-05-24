@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://b6nvpuv05m6o6" path="res://scripts/menus/options.gd" id="1_kmlaq"]
 [ext_resource type="Texture2D" uid="uid://c1ro1wx3tj8bv" path="res://assets/menu_art/title.png" id="2_kmlaq"]
-[ext_resource type="Texture2D" uid="uid://n86wguy4j1p0" path="res://assets/menu_art/buttonsBackground.png" id="3_q6yoi"]
-[ext_resource type="Texture2D" uid="uid://cc1dmnmc6jbgx" path="res://assets/menu_art/buttonsBackgroundOnHover.png" id="4_kmlaq"]
+[ext_resource type="Texture2D" uid="uid://n86wguy4j1p0" path="res://assets/menu_art/buttons_background.png" id="3_q6yoi"]
+[ext_resource type="Texture2D" uid="uid://cc1dmnmc6jbgx" path="res://assets/menu_art/buttons_background_on_hover.png" id="4_kmlaq"]
 [ext_resource type="Texture2D" uid="uid://c7nsvtcgshpnc" path="res://assets/menu_art/characters.png" id="6_kmlaq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_kmlaq"]
@@ -44,6 +44,7 @@ texture_normal = ExtResource("3_q6yoi")
 texture_hover = ExtResource("4_kmlaq")
 
 [node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/Menu Buttons/Graphics"]
+layout_mode = 0
 offset_left = 5.0
 offset_right = 139.0
 offset_bottom = 49.0
@@ -56,6 +57,7 @@ texture_normal = ExtResource("3_q6yoi")
 texture_hover = ExtResource("4_kmlaq")
 
 [node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/Menu Buttons/Sound"]
+layout_mode = 0
 offset_left = 5.0
 offset_right = 139.0
 offset_bottom = 49.0
@@ -68,6 +70,7 @@ texture_normal = ExtResource("3_q6yoi")
 texture_hover = ExtResource("4_kmlaq")
 
 [node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/Menu Buttons/Back"]
+layout_mode = 0
 offset_left = 5.0
 offset_right = 139.0
 offset_bottom = 49.0
