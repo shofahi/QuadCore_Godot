@@ -1,0 +1,118 @@
+[gd_scene load_steps=7 format=3 uid="uid://b5ispyx76g4kw"]
+
+[ext_resource type="Script" uid="uid://df6octp0pt5gs" path="res://scripts/menus/main_menu.gd" id="1_1hnlc"]
+[ext_resource type="Texture2D" uid="uid://c1ro1wx3tj8bv" path="res://assets/menu_art/title.png" id="2_1hnlc"]
+[ext_resource type="Texture2D" uid="uid://n86wguy4j1p0" path="res://assets/menu_art/buttons_background.png" id="3_imvie"]
+[ext_resource type="Texture2D" uid="uid://cc1dmnmc6jbgx" path="res://assets/menu_art/buttons_background_on_hover.png" id="4_ng0o5"]
+[ext_resource type="Texture2D" uid="uid://c7nsvtcgshpnc" path="res://assets/menu_art/characters.png" id="8_1hnlc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1hnlc"]
+font_size = 35
+
+[node name="Main Menu" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 120
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 120
+theme_override_constants/margin_bottom = 80
+script = ExtResource("1_1hnlc")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Title Art" type="TextureRect" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_1hnlc")
+
+[node name="Menu Buttons" type="VBoxContainer" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Save" type="TextureButton" parent="HBoxContainer/VBoxContainer/Menu Buttons"]
+layout_mode = 2
+texture_normal = ExtResource("3_imvie")
+texture_hover = ExtResource("4_ng0o5")
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/Menu Buttons/Save"]
+layout_mode = 0
+offset_left = 5.0
+offset_right = 139.0
+offset_bottom = 49.0
+text = "Save"
+label_settings = SubResource("LabelSettings_1hnlc")
+
+[node name="Load Map" type="TextureButton" parent="HBoxContainer/VBoxContainer/Menu Buttons"]
+layout_mode = 2
+texture_normal = ExtResource("3_imvie")
+texture_hover = ExtResource("4_ng0o5")
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/Menu Buttons/Load Map"]
+layout_mode = 0
+offset_left = 5.0
+offset_right = 139.0
+offset_bottom = 49.0
+text = "Load Map"
+label_settings = SubResource("LabelSettings_1hnlc")
+
+[node name="High Scores" type="TextureButton" parent="HBoxContainer/VBoxContainer/Menu Buttons"]
+layout_mode = 2
+texture_normal = ExtResource("3_imvie")
+texture_hover = ExtResource("4_ng0o5")
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/Menu Buttons/High Scores"]
+layout_mode = 0
+offset_left = 5.0
+offset_right = 139.0
+offset_bottom = 49.0
+text = "High Score"
+label_settings = SubResource("LabelSettings_1hnlc")
+
+[node name="Choose Char" type="TextureButton" parent="HBoxContainer/VBoxContainer/Menu Buttons"]
+layout_mode = 2
+texture_normal = ExtResource("3_imvie")
+texture_hover = ExtResource("4_ng0o5")
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/Menu Buttons/Choose Char"]
+layout_mode = 0
+offset_left = 5.0
+offset_right = 139.0
+offset_bottom = 49.0
+rotation = -0.000112076
+text = "Choose Char"
+label_settings = SubResource("LabelSettings_1hnlc")
+
+[node name="Titlescreen" type="TextureButton" parent="HBoxContainer/VBoxContainer/Menu Buttons"]
+layout_mode = 2
+texture_normal = ExtResource("3_imvie")
+texture_hover = ExtResource("4_ng0o5")
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/Menu Buttons/Titlescreen"]
+layout_mode = 0
+offset_left = 5.0
+offset_right = 139.0
+offset_bottom = 49.0
+text = "Titlescreen"
+label_settings = SubResource("LabelSettings_1hnlc")
+
+[node name="CenterContainer" type="CenterContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Menu Art" type="TextureRect" parent="HBoxContainer/CenterContainer"]
+layout_mode = 2
+texture = ExtResource("8_1hnlc")
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Menu Buttons/Save" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Menu Buttons/Load Map" to="." method="_on_load_map_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Menu Buttons/High Scores" to="." method="_on_high_scores_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Menu Buttons/Choose Char" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Menu Buttons/Titlescreen" to="." method="_on_exit_pressed"]
