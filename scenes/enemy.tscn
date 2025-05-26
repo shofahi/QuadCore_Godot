@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dewthxptp7fxn"]
 
 [ext_resource type="Script" uid="uid://cnxa11koh0nlv" path="res://scripts/enemy.gd" id="1_md0e3"]
-[ext_resource type="Texture2D" uid="uid://cv56uq0vklbya" path="res://assets/Enemies/Bat.png" id="2_4ra3w"]
+[ext_resource type="Texture2D" uid="uid://cv56uq0vklbya" path="res://assets/sprites/enemies/bat.png" id="2_4ra3w"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j7wrs"]
 radius = 4.0
