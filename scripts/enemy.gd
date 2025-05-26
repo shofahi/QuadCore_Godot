@@ -4,6 +4,7 @@ enum State {IDLE, CHASING, ATTACKING, STUNNED, DYING}
 
 const DEFAULT_SPEED := 60
 const CHASE_DISTANCE := 150
+const LEASE_DISTANCE := 180
 const INITIAL_STATE := State.IDLE
 
 @export var speed: float = DEFAULT_SPEED
@@ -35,8 +36,7 @@ func _physics_process(delta: float) -> void:
 
 func state_idle(_delta: float) -> void:
 	if is_instance_valid(player):
-		print(global_position.distance_to(player.global_position))
-		if global_position.distance_to(player.global_position) < 150:
+		if global_position.distance_to(player.global_position) < CHASE_DISTANCE:
 			set_state(State.CHASING)
 
 func state_chase(_delta: float) -> void:
@@ -44,7 +44,7 @@ func state_chase(_delta: float) -> void:
 		return
 
 	var distance := global_position.distance_to(player.global_position)
-	if distance > CHASE_DISTANCE:
+	if distance > LEASE_DISTANCE:
 		set_state(State.IDLE)
 
 	# TODO: Implement attacking based on distance to player
