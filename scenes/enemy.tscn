@@ -9,9 +9,11 @@ height = 12.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_04qyp"]
 radius = 4.0
-height = 10.0
+height = 8.0
 
 [node name="Enemy" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 4
 script = ExtResource("1_md0e3")
 metadata/_edit_group_ = true
 
@@ -23,11 +25,12 @@ hframes = 5
 position = Vector2(1, -4)
 shape = SubResource("CapsuleShape2D_j7wrs")
 
-[node name="Hurtbox" type="Area2D" parent="."]
-collision_mask = 2
+[node name="Hitbox" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 8
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
-position = Vector2(1, -3)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(1, -4)
 shape = SubResource("CapsuleShape2D_04qyp")
 
-[connection signal="body_entered" from="Hurtbox" to="." method="_on_hurtbox_body_entered"]
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
