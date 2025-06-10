@@ -5,9 +5,9 @@ const SPEED : float = 100.0
 
 # Dash
 const DASH_SPEED_MULTIPLIER : float = 4.0
-const DASH_DURATION : float = 0.15 
+const DASH_DURATION : float = 0.15
 var is_dashing : bool = false
-var dash_timer : float = 0.0 
+var dash_timer : float = 0.0
 
 @onready var dash_cooldown_timer = $"Dash_Cooldown"
 @onready var dash_ghost_timer = $Ghost_Timer
@@ -19,7 +19,7 @@ func _physics_process(delta: float) -> void:
 
 	# Handle Dash Input
 	if Input.is_action_just_pressed("DASH") and not is_dashing and dash_cooldown_timer.is_stopped():
-		_start_dash(input_direction)
+		_start_dash()
 
 	if is_dashing:
 		velocity = input_direction * (SPEED * DASH_SPEED_MULTIPLIER)
@@ -31,12 +31,12 @@ func _physics_process(delta: float) -> void:
 			velocity = input_direction * SPEED
 		else:
 			velocity = velocity.move_toward(Vector2.ZERO, SPEED)
-	
+
 	_update_animation(input_direction)
-	
+
 	move_and_slide()
 
-func _start_dash(input_dir: Vector2) -> void:
+func _start_dash() -> void:
 	is_dashing = true
 	dash_timer = DASH_DURATION
 	dash_cooldown_timer.start()
@@ -71,12 +71,13 @@ func _update_animation(input_direction: Vector2) -> void:
 func _instance_dash_sprite():
 	var ghost : Sprite2D = dash_sprite_object.instantiate()
 	get_parent().get_parent().add_child(ghost)
-	
+
 	ghost.global_position = global_position
-	
+
 	var current_animation_name = animation.animation
 	var current_frame_index = animation.frame
-	var current_frame_texture = animation.sprite_frames.get_frame_texture(current_animation_name, current_frame_index)
+	var current_frame_texture = animation.sprite_frames.get_frame_texture(current_animation_name,
+																		current_frame_index)
 
 	ghost.texture = current_frame_texture
 	var scale_factor = 0.25
