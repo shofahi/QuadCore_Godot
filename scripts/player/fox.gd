@@ -2,17 +2,17 @@ extends CharacterBody2D
 
 # Movement
 const SPEED : float = 100.0
-
-# Dash
 const DASH_SPEED_MULTIPLIER : float = 4.0
 const DASH_DURATION : float = 0.15
+
+@export var dash_sprite_object: PackedScene
+
 var is_dashing : bool = false
 var dash_timer : float = 0.0
 
 @onready var dash_cooldown_timer = $"Dash_Cooldown"
 @onready var dash_ghost_timer = $Ghost_Timer
 @onready var animation =  $AnimatedSprite2D
-@export var dash_sprite_object: PackedScene
 
 func _physics_process(delta: float) -> void:
 	var input_direction := Input.get_vector("MOVE_LEFT", "MOVE_RIGHT", "MOVE_UP", "MOVE_DOWN")
