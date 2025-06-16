@@ -1,0 +1,220 @@
+[gd_scene load_steps=30 format=3 uid="uid://giadivvosgv"]
+
+[ext_resource type="Texture2D" uid="uid://bu0sxgk6uneyb" path="res://assets/sprites/player/Fox.png" id="1_q320a"]
+[ext_resource type="Script" uid="uid://bllqm3iwt1bwk" path="res://scripts/player/fox.gd" id="1_ufccv"]
+[ext_resource type="PackedScene" uid="uid://cxrnrnhnti224" path="res://scenes/player/dash_sprite.tscn" id="2_ujbjm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e4f0q"]
+atlas = ExtResource("1_q320a")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i3ljd"]
+atlas = ExtResource("1_q320a")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tgc2x"]
+atlas = ExtResource("1_q320a")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6tk3r"]
+atlas = ExtResource("1_q320a")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4n1d8"]
+atlas = ExtResource("1_q320a")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_niw3u"]
+atlas = ExtResource("1_q320a")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k7elu"]
+atlas = ExtResource("1_q320a")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p0vgo"]
+atlas = ExtResource("1_q320a")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2u77t"]
+atlas = ExtResource("1_q320a")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7fst"]
+atlas = ExtResource("1_q320a")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aiwdv"]
+atlas = ExtResource("1_q320a")
+region = Rect2(640, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v6fhu"]
+atlas = ExtResource("1_q320a")
+region = Rect2(704, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q320a"]
+atlas = ExtResource("1_q320a")
+region = Rect2(1152, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ufccv"]
+atlas = ExtResource("1_q320a")
+region = Rect2(1216, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_35nom"]
+atlas = ExtResource("1_q320a")
+region = Rect2(1280, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3u0el"]
+atlas = ExtResource("1_q320a")
+region = Rect2(1344, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_brrv0"]
+atlas = ExtResource("1_q320a")
+region = Rect2(1408, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2g4xt"]
+atlas = ExtResource("1_q320a")
+region = Rect2(1472, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m5q2l"]
+atlas = ExtResource("1_q320a")
+region = Rect2(768, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ael4"]
+atlas = ExtResource("1_q320a")
+region = Rect2(832, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p8a3a"]
+atlas = ExtResource("1_q320a")
+region = Rect2(896, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f3swx"]
+atlas = ExtResource("1_q320a")
+region = Rect2(960, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4hsv8"]
+atlas = ExtResource("1_q320a")
+region = Rect2(1024, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8fabx"]
+atlas = ExtResource("1_q320a")
+region = Rect2(1088, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mnd4m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e4f0q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i3ljd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tgc2x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6tk3r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4n1d8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_niw3u")
+}],
+"loop": true,
+"name": &"MOVE_EAST",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k7elu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p0vgo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2u77t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h7fst")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aiwdv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v6fhu")
+}],
+"loop": true,
+"name": &"MOVE_NORTH",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q320a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ufccv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_35nom")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3u0el")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_brrv0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2g4xt")
+}],
+"loop": true,
+"name": &"MOVE_SOUTH",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m5q2l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ael4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p8a3a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f3swx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4hsv8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8fabx")
+}],
+"loop": true,
+"name": &"MOVE_WEST",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_palkf"]
+radius = 5.0
+height = 20.0
+
+[node name="Fox" type="CharacterBody2D"]
+script = ExtResource("1_ufccv")
+dash_sprite_object = ExtResource("2_ujbjm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_mnd4m")
+animation = &"MOVE_EAST"
+
+[node name="Dash_Cooldown" type="Timer" parent="."]
+one_shot = true
+
+[node name="Ghost_Timer" type="Timer" parent="."]
+wait_time = 0.01
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 1)
+shape = SubResource("CapsuleShape2D_palkf")
+
+[connection signal="timeout" from="Ghost_Timer" to="." method="_on_ghost_timer_timeout"]
